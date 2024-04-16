@@ -1,14 +1,6 @@
 <?php
 $mail = $_GET['mail'];
 
-//var_dump($mail);
-
-// if (str_contains($mail, '@') && str_contains($mail, '.')) {
-//     echo ($success);
-// } else {
-//     echo ($error);
-// }
-
 function mailVerify($mail)
 {
     $error = "<p class='alert-danger p-2 lead'>Iscrizione non riuscita inserisci una mail Valida</p>";
