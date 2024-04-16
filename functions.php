@@ -11,13 +11,15 @@ $mail = $_POST['mail'];
 
 function mailVerify($mail)
 {
-    $error = "<p style='color: red;' class='p-2 lead'>Iscrizione non riuscita inserisci una mail Valida</p>";
+    $error = "<p class='alert-danger p-2 lead'>Iscrizione non riuscita inserisci una mail Valida</p>";
 
-    $success = "<p style='color: green;' class=' p-2 lead'>Congratulazioni sei iscritto alla newsletter</p>";
+    $success = "<p class='alert-success p-2 lead'>Congratulazioni sei iscritto alla newsletter</p>";
 
     if (str_contains($mail, '@') && str_contains($mail, '.')) {
-        echo ($success);
+        //echo str_replace('class="p-2 lead', 'class="alert-success p-2 lead', $success);
+        echo $success;
     } else {
-        echo ($error);
+        //echo str_replace('class="p-2 lead', 'class="alert-danger p-2 lead', $error);
+        echo $error; // l'idea della generazione automatica delle classi non ha funziuonato con il replace
     }
 }

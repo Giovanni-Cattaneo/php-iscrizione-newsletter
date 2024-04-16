@@ -22,6 +22,14 @@ include 'functions.php';
                 border: 1px solid black;
                 background-color: white;
             }
+
+            .alert-danger {
+                color: red;
+            }
+
+            .alert-success {
+                color: green;
+            }
         }
 
         header {
