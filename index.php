@@ -20,10 +20,17 @@
             background-color: turquoise;
         }
 
-        .submit {}
+        footer {
+            background-color: black;
 
-        .btn {
-            background-color: white;
+            & ul {
+                list-style: none;
+
+                & a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
         }
     </style>
 
@@ -34,7 +41,7 @@
         <h1>Welcome to Bolean News</h1>
         <div class="search">
             <input type="text">
-            <button type="button" class="btn">Cerca</button>
+            <button type="button" class="btn btn-primary">Cerca</button>
         </div>
 
     </header>
@@ -108,12 +115,36 @@
         <div class="submit d-flex align-items-center mt-5 p-5 gap-3 flex-column">
             <h3>Iscriviti alla newsletter</h3>
             <p>rimani aggiornato su tutte le novità di Boolean</p>
-            <input type="mail">
-            <button type="button" class="btn">Iscriviti</button>
+            <input type="email" name="mail" id="" placeholder="Inserisci la tua e-mail">
+            <button type="button" class="btn btn-primary">Iscriviti</button>
         </div>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="container d-flex justify-content-evenly p-3">
+            <ul style="list-style: none;">
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+            </ul>
+            <ul style="list-style: none;">
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+                <li><a href="">Ciao</a></li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 
