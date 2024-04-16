@@ -7,11 +7,11 @@ $error = 'Iscrizione non riuscita inserisci una mail Valida';
 
 $success = 'Congratulazioni sei iscritto alla newsletter';
 
-if (str_contains($mail, '@') && str_contains($mail, '.')) {
-    echo ($success);
-} else {
-    echo ($error);
-}
+// if (str_contains($mail, '@') && str_contains($mail, '.')) {
+//     echo ($success);
+// } else {
+//     echo ($error);
+// }
 
 ?>
 
@@ -130,8 +130,17 @@ if (str_contains($mail, '@') && str_contains($mail, '.')) {
             <p>rimani aggiornato su tutte le novità di Boolean</p>
             <form action="" method="get" class="d-flex align-items-center gap-2">
                 <input type="text" name="mail" id="" placeholder="Inserisci la tua e-mail">
-                <button type="button" class="btn btn-primary">Iscriviti</button>
+                <button type="submit" class="btn btn-primary">Iscriviti</button>
             </form>
+            <?php if (isset($mail)) {
+                if (str_contains($mail, '@') && str_contains($mail, '.')) {
+                    echo ($success);
+                } else {
+                    echo ($error);
+                }
+            } else {
+                echo ('Inserisci un qualsiasi indirizzo email');
+            } ?>
 
         </div>
     </main>
