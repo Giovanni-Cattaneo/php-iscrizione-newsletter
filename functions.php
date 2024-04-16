@@ -18,6 +18,7 @@ function mailVerify($mail)
     if (str_contains($mail, '@') && str_contains($mail, '.')) {
         //echo str_replace('class="p-2 lead', 'class="alert-success p-2 lead', $success);
         echo $success;
+        header("Location: http://localhost/php/php-iscrizione-newsletter/thankyou.php");
     } else {
         //echo str_replace('class="p-2 lead', 'class="alert-danger p-2 lead', $error);
         echo $error; // l'idea della generazione automatica delle classi non ha funziuonato con il replace
