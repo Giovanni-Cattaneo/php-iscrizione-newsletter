@@ -3,11 +3,14 @@
 $mail = $_GET['mail'];
 
 //var_dump($mail);
+$error = 'Iscrizione non riuscita inserisci una mail Valida';
+
+$success = 'Congratulazioni sei iscritto alla newsletter';
 
 if (str_contains($mail, '@') && str_contains($mail, '.')) {
-    var_dump('Congratulazioni sei iscritto alla newsletter');
+    echo ($success);
 } else {
-    var_dump('Iscrizione non riuscita inserisci una mail Valida');
+    echo ($error);
 }
 
 ?>
