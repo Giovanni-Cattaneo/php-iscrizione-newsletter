@@ -1,5 +1,5 @@
 <?php
-$mail = $_POST['mail'];
+$mail = $_GET['mail'];
 
 //var_dump($mail);
 

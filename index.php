@@ -131,7 +131,7 @@ include 'functions.php';
         <div class="submit d-flex align-items-center mt-5 p-5 gap-3 flex-column">
             <h3>Iscriviti alla newsletter</h3>
             <p>rimani aggiornato su tutte le novità di Boolean</p>
-            <form action="" method="post" class="d-flex align-items-center gap-2">
+            <form action="" method="get" class="d-flex align-items-center gap-2">
                 <input type="text" name="mail" id="" placeholder="Inserisci la tua e-mail">
                 <button type="submit" class="btn btn-primary">Iscriviti</button>
             </form>
