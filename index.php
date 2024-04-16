@@ -2,7 +2,13 @@
 
 $mail = $_GET['mail'];
 
-var_dump($mail);
+//var_dump($mail);
+
+if (str_contains($mail, '@') && str_contains($mail, '.')) {
+    var_dump('Congratulazioni sei iscritto alla newsletter');
+} else {
+    var_dump('Iscrizione non riuscita inserisci una mail Valida');
+}
 
 ?>
 
@@ -120,7 +126,7 @@ var_dump($mail);
             <h3>Iscriviti alla newsletter</h3>
             <p>rimani aggiornato su tutte le novità di Boolean</p>
             <form action="" method="get" class="d-flex align-items-center gap-2">
-                <input type="email" name="mail" id="" placeholder="Inserisci la tua e-mail">
+                <input type="text" name="mail" id="" placeholder="Inserisci la tua e-mail">
                 <button type="button" class="btn btn-primary">Iscriviti</button>
             </form>
 
