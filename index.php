@@ -1,27 +1,5 @@
 <?php
-
-$mail = $_GET['mail'];
-
-//var_dump($mail);
-
-// if (str_contains($mail, '@') && str_contains($mail, '.')) {
-//     echo ($success);
-// } else {
-//     echo ($error);
-// }
-
-function mailVerify($mail)
-{
-    $error = "<p style='color: red;' class='p-2 lead'>Iscrizione non riuscita inserisci una mail Valida</p>";
-
-    $success = "<p style='color: green;' class=' p-2 lead'>Congratulazioni sei iscritto alla newsletter</p>";
-
-    if (str_contains($mail, '@') && str_contains($mail, '.')) {
-        echo ($success);
-    } else {
-        echo ($error);
-    }
-}
+include 'functions.php';
 
 ?>
 
@@ -145,7 +123,7 @@ function mailVerify($mail)
         <div class="submit d-flex align-items-center mt-5 p-5 gap-3 flex-column">
             <h3>Iscriviti alla newsletter</h3>
             <p>rimani aggiornato su tutte le novità di Boolean</p>
-            <form action="" method="get" class="d-flex align-items-center gap-2">
+            <form action="" method="post" class="d-flex align-items-center gap-2">
                 <input type="text" name="mail" id="" placeholder="Inserisci la tua e-mail">
                 <button type="submit" class="btn btn-primary">Iscriviti</button>
             </form>
