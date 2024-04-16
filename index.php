@@ -3,15 +3,25 @@
 $mail = $_GET['mail'];
 
 //var_dump($mail);
-$error = 'Iscrizione non riuscita inserisci una mail Valida';
-
-$success = 'Congratulazioni sei iscritto alla newsletter';
 
 // if (str_contains($mail, '@') && str_contains($mail, '.')) {
 //     echo ($success);
 // } else {
 //     echo ($error);
 // }
+
+function mailVerify($mail)
+{
+    $error = "<p style='color: red;' class='p-2 lead'>Iscrizione non riuscita inserisci una mail Valida</p>";
+
+    $success = "<p style='color: green;' class=' p-2 lead'>Congratulazioni sei iscritto alla newsletter</p>";
+
+    if (str_contains($mail, '@') && str_contains($mail, '.')) {
+        echo ($success);
+    } else {
+        echo ($error);
+    }
+}
 
 ?>
 
@@ -27,6 +37,13 @@ $success = 'Congratulazioni sei iscritto alla newsletter';
     <style>
         body {
             background-color: antiquewhite;
+        }
+
+        .response {
+            & p {
+                border: 1px solid black;
+                background-color: white;
+            }
         }
 
         header {
@@ -132,15 +149,14 @@ $success = 'Congratulazioni sei iscritto alla newsletter';
                 <input type="text" name="mail" id="" placeholder="Inserisci la tua e-mail">
                 <button type="submit" class="btn btn-primary">Iscriviti</button>
             </form>
-            <?php if (isset($mail)) {
-                if (str_contains($mail, '@') && str_contains($mail, '.')) {
-                    echo ($success);
+            <div class="response">
+                <?php if (isset($mail)) {
+                    mailVerify($mail);
                 } else {
-                    echo ($error);
-                }
-            } else {
-                echo ('Inserisci un qualsiasi indirizzo email');
-            } ?>
+                    echo "<span class='p-2 lead'>Inserisci un qualsiasi indirizzo email</span>";
+                } ?>
+
+            </div>
 
         </div>
     </main>
