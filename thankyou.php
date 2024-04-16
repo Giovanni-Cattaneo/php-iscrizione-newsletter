@@ -65,7 +65,6 @@
     <header class="d-flex align-items-center justify-content-between p-3">
         <div class="intestation">
             <h1>Welcome to Bolean News</h1>
-            <a href="http://localhost/php/php-iscrizione-newsletter/index.php">Home</a>
         </div>
 
         <div class="search">
@@ -77,7 +76,7 @@
 
     <main class="d-flex justify-content-center align-items-center">
         <h2>Grazie per esserti iscritto alla nostra Newsletter</h2>
-        <p>Clicca su Home per tornare indietro</p>
+        <p>Clicca <a href="http://localhost/php/php-iscrizione-newsletter/index.php">qui</a> per tornare indietro</p>
     </main>
 
     <footer>
