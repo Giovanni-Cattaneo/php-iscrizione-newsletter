@@ -13,6 +13,8 @@ function mailVerify($mail)
         header("Location: http://localhost/php/php-iscrizione-newsletter/thankyou.php");
     } else {
         //echo str_replace('class="p-2 lead', 'class="alert-danger p-2 lead', $error);
+        // $mail['value'] = $mail;
+        echo "<script>document.getElementById('email').value = '$mail';</script>";
         echo $error; // l'idea della generazione automatica delle classi non ha funziuonato con il replace
     }
 }

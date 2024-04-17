@@ -132,7 +132,7 @@ include 'functions.php';
             <h3>Iscriviti alla newsletter</h3>
             <p>rimani aggiornato su tutte le novità di Boolean</p>
             <form action="" method="get" class="d-flex align-items-center gap-2">
-                <input type="text" name="mail" id="" placeholder="Inserisci la tua e-mail">
+                <input type="text" name="mail" id="email" value="<?php echo htmlspecialchars($mail); ?>" placeholder="Inserisci la tua e-mail">
                 <button type="submit" class="btn btn-primary">Iscriviti</button>
             </form>
             <div class="response">
